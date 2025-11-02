@@ -3,50 +3,26 @@
     {
       "id": "muhammad-tukur",
       "description": "Professional headshot of Muhammad Muhammad Tukur",
-      "imageUrl": "https://images.unsplash.com/photo-1543132220-3ec99c6094dc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxwcm9mZXNzaW9uYWwlMjBtYW58ZW58MHx8fHwxNzYyMDI3MzM5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/studio-1699070288-cac4b.firebasestorage.app/o/muhammad-headshot.jpeg?alt=media&token=cc2b4005-d373-40b8-bf6d-29d473274eab",
       "imageHint": "professional man"
     },
     {
       "id": "aminu-muhammad",
       "description": "Professional headshot of Aminu S. Muhammad",
-      "imageUrl": "https://images.unsplash.com/photo-1663497823484-a72c173ca04a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxwcm9mZXNzaW9uYWwlMjBtYW4lMjBhZnJpY2FufGVufDB8fHx8MTc2MjEwNTg0NXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/studio-1699070288-cac4b.firebasestorage.app/o/aminu-headshot.jpeg?alt=media&token=2c8b59cc-b1b6-464d-8565-8c404bfee8e6",
       "imageHint": "professional man african"
     },
     {
       "id": "nigcomsat-logo",
       "description": "NIGCOMSAT logo",
-      "imageUrl": "https://images.unsplash.com/photo-1704089272382-201cf5c1bbbb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxsb2dvJTIwdGVjaHxlbnwwfHx8fDE3NjIwMDE1NTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/studio-1699070288-cac4b.firebasestorage.app/o/nigcomsat.jpeg?alt=media&token=08ab83ed-8df0-4111-b3b5-3f68b81f64da",
       "imageHint": "logo tech"
-    },
-    {
-      "id": "yiaga-logo",
-      "description": "Yiaga Africa logo",
-      "imageUrl": "https://images.unsplash.com/photo-1655102717581-a6a3fa59a2a6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxsb2dvJTIwYWZyaWNhfGVufDB8fHx8MTc2MjEwNTg0NXww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "logo africa"
-    },
-    {
-      "id": "un-logo",
-      "description": "UN Academic Impact logo",
-      "imageUrl": "https://images.unsplash.com/photo-1596144895688-dd669b7ca817?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxsb2dvJTIwb3JnYW5pemF0aW9ufGVufDB8fHx8MTc2MjEwNTg0NXww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "logo organization"
-    },
-    {
-      "id": "mckinsey-logo",
-      "description": "McKinsey & Company logo",
-      "imageUrl": "https://images.unsplash.com/photo-1660071155921-7204712d7d1a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxsb2dvJTIwY29uc3VsdGluZ3xlbnwwfHx8fDE3NjIwOTQ3NDV8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "logo consulting"
     },
     {
       "id": "google-dev-logo",
       "description": "Google Developers logo",
-      "imageUrl": "https://images.unsplash.com/photo-1662947203440-573db428a7ab?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bG9nbyUyMGdvb2dsZXxlbnwwfHx8fDE3NjIxMDU4NDZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/studio-1699070288-cac4b.firebasestorage.app/o/gdg-gsu.png?alt=media&token=bfacbe82-69ca-447d-9a2d-720f46bf4d6b",
       "imageHint": "logo google"
-    },
-    {
-      "id": "leap-africa-logo",
-      "description": "LEAP Africa logo",
-      "imageUrl": "https://images.unsplash.com/photo-1655102717581-a6a3fa59a2a6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxsb2dvJTIwYWZyaWNhfGVufDB8fHx8MTc2MjEwNTg0NXww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "logo africa"
     },
     {
       "id": "propabridge-app-screenshot",
