@@ -48,6 +48,6 @@ const aiCustomerSupportChatbotFlow = ai.defineFlow(
   },
   async input => {
     const {output} = await prompt(input);
-    return {response: output!};
+    return output!;
   }
 );

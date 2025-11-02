@@ -6,6 +6,7 @@ import { Toaster } from "@/components/ui/toaster";
 import './globals.css';
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://zippatek.com'),
   title: 'Zippatek | Building Africa\'s Property Intelligence Infrastructure',
   description: "AI-powered platforms solving Africa's ₦2T property problem. Satellite mapping, fraud-free marketplaces, and government revenue recovery.",
   keywords: "PropTech Nigeria, Property Technology Africa, Real Estate AI, Satellite Mapping",

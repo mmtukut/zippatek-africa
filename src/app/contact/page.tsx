@@ -1,4 +1,5 @@
 import { ContactForm } from "./contact-form";
+import { Suspense } from 'react';
 
 const PageHeader = ({ title, subtitle }: { title: string, subtitle: string }) => (
     <div className="bg-primary-900 text-white pt-32 pb-16">
@@ -16,7 +17,9 @@ export default function ContactPage() {
             <div className="py-24 bg-background">
                 <div className="container max-w-2xl mx-auto">
                     <div className="bg-card p-8 md:p-12 rounded-2xl shadow-lg border">
-                        <ContactForm />
+                       <Suspense fallback={<div>Loading...</div>}>
+                          <ContactForm />
+                        </Suspense>
                     </div>
                 </div>
             </div>
