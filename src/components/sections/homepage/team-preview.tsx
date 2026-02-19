@@ -9,6 +9,20 @@ import { Linkedin, ArrowRight } from "lucide-react";
 
 const founders = [
     {
+        name: "Aminu S. Muhammad",
+        title: "Co-Founder & CEO",
+        image: PlaceHolderImages.find(p => p.id === "aminu-muhammad"),
+        credentials: [
+            "Chartered Estate Surveyor & Valuer",
+            "20+ Years Industry Experience",
+            "Founder, Property Market NG",
+        ],
+        bio: "Property industry veteran bringing deep market expertise and government relationships. A licensed marketer with a passion for transparency.",
+        linkedin: "https://www.linkedin.com/in/aminu-s-muhammad-86997b27/",
+
+
+    },
+    {
         name: "Muhammad Muhammad Tukur",
         title: "Co-Founder & CTO",
         image: PlaceHolderImages.find(p => p.id === "muhammad-tukur"),
@@ -19,19 +33,7 @@ const founders = [
             "NIGCOMSAT Accelerator Alumnus",
         ],
         bio: "Tech visionary with a track record of building AI-native solutions. Led 1,000+ students in digital transformation initiatives across Northeast Nigeria.",
-        linkedin: "#",
-    },
-    {
-        name: "Aminu S. Muhammad",
-        title: "Co-Founder & COO",
-        image: PlaceHolderImages.find(p => p.id === "aminu-muhammad"),
-        credentials: [
-            "Chartered Estate Surveyor & Valuer",
-            "20+ Years Industry Experience",
-            "Founder, Property Market NG",
-        ],
-        bio: "Property industry veteran bringing deep market expertise and government relationships. A licensed marketer with a passion for transparency.",
-        linkedin: "#",
+        linkedin: "https://www.linkedin.com/in/mmtukurofficial",
     },
 ];
 
@@ -101,7 +103,7 @@ export function TeamPreview() {
                     ))}
                 </div>
 
-                <motion.div 
+                <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
