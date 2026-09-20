@@ -1,4 +1,5 @@
 import { Hero } from "@/components/sections/homepage/hero";
+import { CompanyOverview } from "@/components/sections/homepage/company-overview";
 import { ProblemStatement } from "@/components/sections/homepage/problem-statement";
 import { ProductShowcase } from "@/components/sections/homepage/product-showcase";
 import { WhyZippatek } from "@/components/sections/homepage/why-zippatek";
@@ -11,6 +12,7 @@ export default function Home() {
   return (
     <>
       <Hero />
+      <CompanyOverview />
       <ProblemStatement />
       <ProductShowcase />
       <WhyZippatek />

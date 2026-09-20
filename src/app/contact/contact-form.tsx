@@ -5,13 +5,12 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
 import { Button } from '@/components/ui/button';
-import { Loader2, Check } from 'lucide-react';
+import { Loader2 } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
 import { useToast } from '@/hooks/use-toast';
-import { useSearchParams } from 'next/navigation';
 
 const contactSchema = z.object({
   name: z.string().min(2, 'Name must be at least 2 characters.'),
@@ -26,8 +25,6 @@ type ContactFormData = z.infer<typeof contactSchema>;
 
 export const ContactForm = () => {
   const { toast } = useToast();
-  const searchParams = useSearchParams();
-  const defaultInquiryType = searchParams.get('type') || 'general';
 
   const form = useForm<ContactFormData>({
     resolver: zodResolver(contactSchema),
@@ -36,7 +33,7 @@ export const ContactForm = () => {
       email: '',
       company: '',
       phone: '',
-      inquiryType: ['general', 'demo', 'partnership', 'press', 'career'].includes(defaultInquiryType) ? defaultInquiryType as ContactFormData['inquiryType'] : 'general',
+      inquiryType: 'general',
       message: '',
     },
   });
@@ -44,29 +41,16 @@ export const ContactForm = () => {
   const { formState: { isSubmitting } } = form;
 
   const onSubmit = async (data: ContactFormData) => {
-    try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data),
-      });
-
-      if (!response.ok) {
-        throw new Error('Failed to send message. Please try again.');
-      }
-
-      toast({
-        title: "Message Sent!",
-        description: "Thank you for reaching out. We'll get back to you shortly.",
-      });
-      form.reset();
-    } catch (err) {
-      toast({
-        variant: "destructive",
-        title: "Uh oh! Something went wrong.",
-        description: err instanceof Error ? err.message : "There was a problem with your request.",
-      });
-    }
+    const subject = encodeURIComponent(`Zippatek enquiry (${data.inquiryType}) — ${data.name}`);
+    const body = encodeURIComponent(
+      `Name: ${data.name}\nEmail: ${data.email}\nCompany: ${data.company || "—"}\nPhone: ${data.phone || "—"}\nType: ${data.inquiryType}\n\n${data.message}`
+    );
+    window.location.href = `mailto:hello@zippatek.com?subject=${subject}&body=${body}`;
+    toast({
+      title: "Opening your email app",
+      description: "Send the drafted message to hello@zippatek.com. If nothing opens, email us directly.",
+    });
+    form.reset();
   };
 
   return (

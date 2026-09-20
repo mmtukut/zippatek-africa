@@ -1,27 +1,44 @@
-import { Button } from "@/components/ui/button";
-import { Download } from "lucide-react";
+import { PageHeader } from "@/components/page-header";
+import { company } from "@/lib/company";
+import type { Metadata } from "next";
 
-const PageHeader = ({ title, subtitle }: { title: string, subtitle: string }) => (
-    <div className="bg-primary-900 text-white py-24">
-        <div className="container text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-4">{title}</h1>
-            <p className="text-lg md:text-xl text-primary-100 max-w-3xl mx-auto">{subtitle}</p>
-        </div>
-    </div>
-);
+export const metadata: Metadata = {
+  title: "Press | Zippatek Digital Ltd",
+  description: "Boilerplate, facts, and contacts for journalists covering Zippatek and Propabridge.",
+};
 
 export default function PressPage() {
-    return (
-        <div>
-            <PageHeader title="Press & Media" subtitle="Resources for journalists, partners, and anyone interested in our story." />
-            <div className="container py-24 text-center">
-                <h2 className="text-2xl font-bold mb-4">Our Press Kit</h2>
-                <p className="text-muted-foreground mb-8">Download our press kit for logos, company information, and founder bios.</p>
-                <Button size="lg">
-                    <Download className="mr-2 h-5 w-5" />
-                    Download Press Kit
-                </Button>
-            </div>
-        </div>
-    );
+  return (
+    <div>
+      <PageHeader
+        title="Press & media"
+        subtitle="Facts you can publish about Zippatek Digital Ltd and our products."
+      />
+      <div className="container py-24 max-w-3xl space-y-10">
+        <section>
+          <h2 className="text-2xl font-bold mb-3">Boilerplate</h2>
+          <p className="text-muted-foreground leading-relaxed">{company.description}</p>
+        </section>
+        <section>
+          <h2 className="text-2xl font-bold mb-3">Facts</h2>
+          <ul className="space-y-2 text-muted-foreground">
+            <li>Legal name: {company.legalName}</li>
+            <li>Registration: RC {company.rcNumber}, Nigeria</li>
+            <li>Incorporated: {company.founded}</li>
+            <li>HQ: {company.address.full}</li>
+            <li>Propabridge office: {company.operationsOffice.full}</li>
+            <li>Live consumer product: https://propabridge.com</li>
+            <li>Cities: {company.cities.join(", ")}</li>
+            <li>Founders: Aminu S. Muhammad (CEO), Muhammad Muhammad Tukur (CTO)</li>
+          </ul>
+        </section>
+        <section>
+          <h2 className="text-2xl font-bold mb-3">Press contact</h2>
+          <p className="text-muted-foreground">
+            {company.email} · {company.phone}
+          </p>
+        </section>
+      </div>
+    </div>
+  );
 }

@@ -64,7 +64,7 @@ export const Header = () => {
 
         <div className="flex items-center gap-4">
             <Button asChild className="hidden lg:flex">
-                <Link href="/contact">Book a Demo</Link>
+                <Link href="/contact/">Book a Demo</Link>
             </Button>
 
             <button
@@ -104,7 +104,7 @@ export const Header = () => {
               ))}
               <div className="pt-6">
                 <Button asChild size="lg" className="w-full">
-                  <Link href="/contact">Book a Demo</Link>
+                  <Link href="/contact/">Book a Demo</Link>
                 </Button>
               </div>
             </div>

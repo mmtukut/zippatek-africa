@@ -29,7 +29,7 @@ export function ProblemStatement() {
             Over 60% of property development in Nigeria occurs informally. Billions lost in unregistered buildings, untaxed spaces, and fraud-plagued transactions. Traditional surveying can't keep pace. We're changing that with space technology.
           </p>
           <Button variant="link" asChild className="text-accent-cyan p-0 h-auto hover:text-white group">
-             <Link href="/about">
+             <Link href="/about/">
               Read the Full Story
               <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
              </Link>

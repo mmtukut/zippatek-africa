@@ -15,10 +15,10 @@ const PageHeader = ({ title, subtitle }: { title: string, subtitle: string }) =>
             <p className="text-lg md:text-xl text-primary-100 max-w-3xl mx-auto">{subtitle}</p>
             <div className="mt-8 flex gap-4 justify-center">
                  <Button asChild size="lg" className="bg-accent-cyan text-gray-900 hover:bg-accent-cyan/90">
-                    <Link href="#">Try Propabridge (soon)</Link>
+                    <a href="https://propabridge.com" target="_blank" rel="noopener noreferrer">Open Propabridge</a>
                 </Button>
                  <Button asChild size="lg" variant="outline" className="border-primary-100/50 hover:bg-white hover:text-primary-900">
-                    <Link href="#">Watch Demo</Link>
+                    <a href="https://propabridge.com/verify" target="_blank" rel="noopener noreferrer">Verify a property</a>
                 </Button>
             </div>
         </div>
@@ -56,7 +56,7 @@ export default function PropabridgePage() {
     const heroImage = PlaceHolderImages.find(p => p.id === 'propabridge-app-screenshot');
     return (
         <div>
-            <PageHeader title="Find Your Home in Minutes, Not Weeks" subtitle="Nigeria's AI-powered property marketplace connecting renters and buyers with verified landlords and developers." />
+            <PageHeader title="Find your home without fake listings" subtitle="Propabridge is live at propabridge.com. Zippatek Digital Ltd operates the marketplace: inspected listings, title checks, Propa AI chat, and zero inspection fees in Abuja, Kaduna, Minna, and Gombe." />
             
             {heroImage && (
                 <div className="bg-primary-900 -mt-10 pb-10">
@@ -110,7 +110,7 @@ export default function PropabridgePage() {
                     </div>
                      <div className="text-center mt-12">
                          <Button asChild size="lg">
-                            <Link href="#">Start Searching</Link>
+                            <a href="https://propabridge.com" target="_blank" rel="noopener noreferrer">Start searching</a>
                         </Button>
                     </div>
                 </div>
