@@ -1,5 +1,4 @@
 import { Hero } from "@/components/sections/homepage/hero";
-import { CompanyOverview } from "@/components/sections/homepage/company-overview";
 import { ProblemStatement } from "@/components/sections/homepage/problem-statement";
 import { ProductShowcase } from "@/components/sections/homepage/product-showcase";
 import { HowPropabridgeWorks } from "@/components/sections/homepage/how-propabridge-works";
@@ -14,7 +13,6 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <CompanyOverview />
       <ProblemStatement />
       <ProductShowcase />
       <HowPropabridgeWorks />

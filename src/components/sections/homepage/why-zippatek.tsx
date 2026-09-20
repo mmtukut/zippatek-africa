@@ -27,7 +27,7 @@ const features = [
     {
         icon: Code,
         title: "Registered operator",
-        description: "Zippatek Digital Ltd, RC 8527315. You transact with a company, not an anonymous listing."
+        description: "You transact with a registered company, not an anonymous listing."
     },
     {
         icon: Zap,
