@@ -22,17 +22,38 @@ export default function ContactPage() {
               <h2 className="text-xl font-bold">Zippatek Digital Ltd</h2>
               <p>RC {company.rcNumber}</p>
               <p>{company.address.full}</p>
+              <p>Registered HQ: {company.address.full}</p>
               <p>Operations: {company.operationsOffice.full}</p>
               <p>
+                Company:{" "}
                 <a className="text-primary underline" href={`mailto:${company.email}`}>{company.email}</a>
+                {" · "}
+                <a className="text-primary underline" href={company.phoneHref}>{company.phone}</a>
               </p>
               <p>
-                <a className="text-primary underline" href={company.phoneHref}>{company.phone}</a>
+                Propabridge:{" "}
+                <a className="text-primary underline" href={`mailto:${company.propabridge.email}`}>{company.propabridge.email}</a>
+                {" · "}
+                <a className="text-primary underline" href={company.propabridge.phoneHref}>{company.propabridge.phone}</a>
+              </p>
+              <p>
+                WhatsApp (Propa):{" "}
+                <a className="text-primary underline" href={company.propabridge.whatsappHref}>{company.propabridge.whatsapp}</a>
               </p>
               <p>
                 Live product:{" "}
                 <a className="text-primary underline" href="https://propabridge.com">propabridge.com</a>
               </p>
+              <div className="pt-2 space-y-3">
+                {company.officeHours.map((office) => (
+                  <div key={office.city}>
+                    <p className="font-semibold">{office.city} hours</p>
+                    {office.lines.map((line) => (
+                      <p key={line} className="text-muted-foreground">{line}</p>
+                    ))}
+                  </div>
+                ))}
+              </div>
             </div>
           </aside>
           <div className="lg:col-span-3">

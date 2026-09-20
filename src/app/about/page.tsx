@@ -38,7 +38,7 @@ const milestones = [
   { year: "2025 Q2", event: "Propabridge prototype launched" },
   { year: "2025 Q3", event: "NIGCOMSAT Accelerator selection" },
   { year: "2025 Q3", event: "Pilot conversations with Urban Shelter and Amsadam" },
-  { year: "2026 Q2", event: "Propabridge public launch at propabridge.com — Abuja, Kaduna, Minna, Gombe" },
+  { year: "2026 Q2", event: "Propabridge public launch at propabridge.com — Abuja, Kaduna, Minna" },
   { year: "2026 Q3", event: "National expansion of verified listings and FastFind360 government pilots" },
 ];
 
@@ -75,6 +75,13 @@ export default function AboutPage() {
                 <p>
                   Founders: Aminu S. Muhammad (CEO) and Muhammad Muhammad Tukur (CTO). Contact {company.email} or {company.phone}.
                 </p>
+                <p>
+                  June 2026 launch numbers published on Propabridge: 63 verified properties, 80 organic buyer leads, 12 AI-booked viewings, ₦0 paid marketing. Named launch partners: Sites &amp; Lifestyle Limited, The Homes Group, Urban Shelter Limited (Kaduna), and Maki Properties.
+                </p>
+                <blockquote className="border-l-4 border-primary pl-4 text-foreground not-italic">
+                  &ldquo;We built Propabridge because Nigerians deserve to find homes with excitement, not fear. &apos;Zero fees, Zero fears&apos; isn&apos;t just our slogan; it&apos;s our promise.&rdquo;
+                  <footer className="mt-2 text-sm font-semibold">Aminu S. Muhammad, Co-Founder</footer>
+                </blockquote>
               </div>
               <Button asChild variant="link" className="p-0 mt-8 h-auto text-primary group">
                 <Link href="/team/">

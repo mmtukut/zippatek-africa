@@ -30,6 +30,36 @@ export function CompanyOverview() {
             <dt className="text-sm text-muted-foreground">Headquarters</dt>
             <dd className="font-semibold mt-1">{company.address.full}</dd>
           </div>
+          <div className="bg-muted/60 rounded-xl p-5 border">
+            <dt className="text-sm text-muted-foreground">Propabridge office</dt>
+            <dd className="font-semibold mt-1">{company.operationsOffice.full}</dd>
+          </div>
+          <div className="bg-muted/60 rounded-xl p-5 border">
+            <dt className="text-sm text-muted-foreground">Live product</dt>
+            <dd className="font-semibold mt-1">
+              <a href="https://propabridge.com" className="text-primary hover:underline">propabridge.com</a>
+            </dd>
+          </div>
+          <div className="bg-muted/60 rounded-xl p-5 border">
+            <dt className="text-sm text-muted-foreground">Founders</dt>
+            <dd className="font-semibold mt-1">Aminu S. Muhammad (CEO), Muhammad Muhammad Tukur (CTO)</dd>
+          </div>
+          <div className="bg-muted/60 rounded-xl p-5 border">
+            <dt className="text-sm text-muted-foreground">Marketplace cities</dt>
+            <dd className="font-semibold mt-1">{company.marketplaceCities.join(", ")}</dd>
+          </div>
+          <div className="bg-muted/60 rounded-xl p-5 border">
+            <dt className="text-sm text-muted-foreground">Abuja office hours</dt>
+            <dd className="font-semibold mt-1">{company.officeHours[0].lines.join(" · ")}</dd>
+          </div>
+          <div className="bg-muted/60 rounded-xl p-5 border">
+            <dt className="text-sm text-muted-foreground">Propabridge WhatsApp</dt>
+            <dd className="font-semibold mt-1">
+              <a href={company.propabridge.whatsappHref} className="text-primary hover:underline">
+                {company.propabridge.whatsapp}
+              </a>
+            </dd>
+          </div>
         </dl>
 
         <h3 className="text-2xl font-bold mb-4">What we build</h3>

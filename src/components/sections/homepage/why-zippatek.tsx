@@ -6,33 +6,33 @@ import { AfricaIcon } from "@/components/icons";
 const features = [
     {
         icon: Bot,
-        title: "AI-Native",
-        description: "Built with artificial intelligence at the core, not bolted on later."
+        title: "Propa on WhatsApp",
+        description: "Multilingual concierge on WhatsApp, web, and voice — English, Hausa, Yoruba, Igbo, Pidgin."
     },
     {
         icon: Satellite,
-        title: "Satellite Precision",
-        description: "Leveraging space technology for unprecedented accuracy."
+        title: "Satellite mapping",
+        description: "FastFind360 uses satellite imagery to find unmapped buildings for government revenue work."
     },
     {
         icon: AfricaIcon,
-        title: "African-First",
-        description: "Designed for Africa's unique challenges, not copied from the West."
+        title: "Built for Nigerian title risk",
+        description: "Physical inspection, title sighting, and owner agreements before a listing is public."
     },
     {
         icon: Building,
-        title: "Government-Ready",
-        description: "Enterprise-grade security and compliance for public sector partners."
+        title: "Government and marketplace",
+        description: "One company: a live consumer marketplace and a satellite tool for revenue boards."
     },
     {
         icon: Code,
-        title: "Developer-Friendly",
-        description: "Robust APIs and documentation for seamless integration."
+        title: "Registered operator",
+        description: "Zippatek Digital Ltd, RC 8527315. You transact with a company, not an anonymous listing."
     },
     {
         icon: Zap,
-        title: "Continuous Innovation",
-        description: "Led by UN Millennium Fellow and McKinsey Forward Champion."
+        title: "Zero inspection fees",
+        description: "Seekers do not pay to view. Partner agents earn 5% when a deal closes."
     }
 ]
 
@@ -49,7 +49,7 @@ export function WhyZippatek() {
                 >
                     <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">Why Zippatek?</h2>
                     <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                        We're not just another proptech company. We are a deep-tech firm building foundational infrastructure.
+                        Verification-first listings, satellite mapping for informal buildings, and a registered Nigerian company behind both products.
                     </p>
                 </motion.div>
 

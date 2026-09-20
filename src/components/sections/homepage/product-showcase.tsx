@@ -9,7 +9,7 @@ const products = [
     title: "Propabridge",
     tagline: "Verified homes. Live in Nigeria.",
     description:
-      "Verification-first marketplace and AI concierge (Propa) at propabridge.com. Physical inspection, title checks, zero inspection fees. Operating in Abuja, Kaduna, Minna, and Gombe.",
+      "Live at propabridge.com since June 2026. Three-step gate: visit, title check, owner agreement. Propa on WhatsApp. Partner 5% on close. Cities: Abuja, Kaduna, Minna.",
     href: "/products/propabridge/",
     badge: "Live product",
   },

@@ -16,6 +16,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/press/",
     "/careers/",
     "/blog/",
+    "/resources/",
     "/privacy/",
     "/terms/",
   ];

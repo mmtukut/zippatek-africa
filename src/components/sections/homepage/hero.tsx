@@ -39,7 +39,7 @@ export const Hero = () => {
           <a className="underline text-accent-cyan" href="https://propabridge.com">
             propabridge.com
           </a>{" "}
-          · Cities: {company.cities.join(", ")}
+          · Cities: {company.marketplaceCities.join(", ")}
         </p>
       </div>
     </section>

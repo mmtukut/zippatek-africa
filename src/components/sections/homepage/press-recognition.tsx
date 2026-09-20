@@ -1,62 +1,38 @@
-'use client';
-
-import Image from "next/image";
-import { motion } from "framer-motion";
-import { PlaceHolderImages } from "@/lib/placeholder-images";
-
-const logos = [
-    PlaceHolderImages.find(p => p.id === "nigcomsat-logo"),
-    PlaceHolderImages.find(p => p.id === "yiaga-logo"),
-    PlaceHolderImages.find(p => p.id === "un-logo"),
-    PlaceHolderImages.find(p => p.id === "mckinsey-logo"),
-    PlaceHolderImages.find(p => p.id === "google-dev-logo"),
-    PlaceHolderImages.find(p => p.id === "leap-africa-logo"),
-].filter(Boolean);
+import { Newspaper } from "lucide-react";
+import { pressMentions } from "@/lib/propabridge-content";
 
 export function PressRecognition() {
-    return (
-        <section className="py-24 bg-background">
-            <div className="container text-center">
-                <motion.h2
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5 }}
-                    className="text-3xl md:text-4xl font-bold text-foreground mb-4"
-                >
-                    As Featured In & Recognized By
-                </motion.h2>
-                <motion.p 
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5, delay: 0.1 }}
-                    className="text-muted-foreground mb-12 max-w-2xl mx-auto"
-                >
-                    Our innovative work is gaining attention from global leaders in technology, development, and social impact.
-                </motion.p>
-                <div className="flex flex-wrap justify-center items-center gap-x-12 gap-y-8">
-                    {logos.map((logo, index) => logo && (
-                        <motion.div
-                            key={logo.id}
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }}
-                            className="grayscale hover:grayscale-0 transition-all duration-300"
-                        >
-                            <Image
-                                src={logo.imageUrl}
-                                alt={logo.description}
-                                width={158}
-                                height={48}
-                                data-ai-hint={logo.imageHint}
-                                className="object-contain"
-                            />
-                        </motion.div>
-                    ))}
+  return (
+    <section className="py-24 bg-background" aria-labelledby="press-heading">
+      <div className="container">
+        <p className="text-sm font-semibold tracking-wide text-primary uppercase mb-3">Media</p>
+        <h2 id="press-heading" className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+          Coverage of the Propabridge launch
+        </h2>
+        <p className="text-muted-foreground mb-12 max-w-2xl">
+          Independent articles published about Propabridge, the live marketplace operated by Zippatek Digital Ltd. We link to the pieces — we do not display third-party marks we do not host.
+        </p>
+        <ul className="grid md:grid-cols-2 gap-6">
+          {pressMentions.map((item) => (
+            <li key={item.url}>
+              <a
+                href={item.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex gap-4 h-full bg-card border rounded-xl p-6 hover:border-primary transition-colors"
+              >
+                <div className="bg-primary/10 p-3 rounded-lg h-fit">
+                  <Newspaper className="h-5 w-5 text-primary" strokeWidth={1.75} />
                 </div>
-            </div>
-        </section>
-    );
+                <div>
+                  <p className="text-sm font-semibold text-primary mb-1">{item.name}</p>
+                  <p className="font-medium text-foreground leading-snug">{item.title}</p>
+                </div>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
+  );
 }

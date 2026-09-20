@@ -79,9 +79,16 @@ export const Footer = () => {
               <li>
                 <a href={`mailto:${company.email}`} className="hover:text-white transition-colors">{company.email}</a>
               </li>
-              <li>{company.address.full}</li>
+              <li>HQ: {company.address.full}</li>
+              <li>Operations: {company.operationsOffice.full}</li>
               <li>
                 <a href={company.phoneHref} className="hover:text-white transition-colors">{company.phone}</a>
+              </li>
+              <li>
+                Propabridge:{" "}
+                <a href={company.propabridge.whatsappHref} className="hover:text-white transition-colors">
+                  WhatsApp {company.propabridge.whatsapp}
+                </a>
               </li>
             </ul>
           </div>
