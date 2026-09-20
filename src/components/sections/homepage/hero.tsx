@@ -10,12 +10,9 @@ export const Hero = () => {
       <div className="absolute inset-0 opacity-5 mix-blend-overlay" style={{ backgroundImage: "url(/grid.svg)" }}></div>
 
       <div className="relative z-10 container text-center">
-        <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 !leading-tight max-w-4xl mx-auto">
+        <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-12 !leading-tight max-w-4xl mx-auto">
           We build digital infrastructure for Africa&apos;s property market.
         </h1>
-        <p className="text-lg md:text-xl text-primary-100 max-w-3xl mx-auto mb-12">
-          Propabridge verifies homes; FastFind360 maps unregistered buildings for government revenue.
-        </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <Button size="lg" asChild className="group">
             <Link href="/products/">
