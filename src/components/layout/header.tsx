@@ -32,6 +32,8 @@ export const Header = () => {
     }
   }, [isMobileMenuOpen]);
 
+  const overDarkHero = !isScrolled && !isMobileMenuOpen;
+
   return (
     <header
       className={cn(
@@ -42,7 +44,7 @@ export const Header = () => {
       <nav className="container flex items-center justify-between h-20">
         <Link href="/" className="flex items-center space-x-2.5 group" onClick={() => setIsMobileMenuOpen(false)}>
           <ZippatekLogo className="w-8 h-8 transform group-hover:scale-110 group-hover:rotate-12 transition-transform duration-300" />
-          <ZippatekWordmark className="text-foreground" />
+          <ZippatekWordmark className={overDarkHero ? 'text-white' : 'text-foreground'} />
         </Link>
 
         <div className="hidden lg:flex items-center space-x-2">
@@ -53,8 +55,12 @@ export const Header = () => {
               className={cn(
                 'px-4 py-2 rounded-lg text-sm font-medium transition-colors',
                 pathname.startsWith(item.href)
-                  ? 'text-primary bg-primary/10'
-                  : 'text-muted-foreground hover:text-foreground hover:bg-muted'
+                  ? overDarkHero
+                    ? 'text-white bg-white/10'
+                    : 'text-primary bg-primary/10'
+                  : overDarkHero
+                    ? 'text-white/80 hover:text-white hover:bg-white/10'
+                    : 'text-muted-foreground hover:text-foreground hover:bg-muted'
               )}
             >
               {item.name}
@@ -63,13 +69,18 @@ export const Header = () => {
         </div>
 
         <div className="flex items-center gap-4">
-            <Button asChild className="hidden lg:flex">
+            <Button asChild className="hidden lg:flex text-white">
                 <Link href="/contact/">Book a Demo</Link>
             </Button>
 
             <button
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="lg:hidden p-2 rounded-lg text-muted-foreground hover:text-foreground transition-colors"
+                className={cn(
+                  'lg:hidden p-2 rounded-lg transition-colors',
+                  overDarkHero
+                    ? 'text-white hover:bg-white/10'
+                    : 'text-muted-foreground hover:text-foreground'
+                )}
                 aria-label="Toggle mobile menu"
             >
                 {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -103,7 +114,7 @@ export const Header = () => {
                 </Link>
               ))}
               <div className="pt-6">
-                <Button asChild size="lg" className="w-full">
+                <Button asChild size="lg" className="w-full text-white">
                   <Link href="/contact/">Book a Demo</Link>
                 </Button>
               </div>

@@ -18,7 +18,7 @@ export const Hero = () => {
           <span className="text-accent-cyan">Property Intelligence</span>
         </h1>
         <p className="text-lg md:text-xl text-primary-100 max-w-3xl mx-auto mb-12">
-          {company.description}
+          {company.heroLead}
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <Button size="lg" asChild className="group">

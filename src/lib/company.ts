@@ -62,6 +62,8 @@ export const company = {
     ],
   },
   tagline: "Building Africa's Property Intelligence Infrastructure",
+  heroLead:
+    "We build digital infrastructure for Africa's property market. Propabridge verifies homes; FastFind360 maps unregistered buildings for government revenue.",
   description:
     "Zippatek Digital Ltd (RC 8527315) is a Nigerian technology company headquartered in Utako, Abuja. We design digital infrastructure for Africa's property market: Propabridge, a live verification-first marketplace, and FastFind360, satellite AI that maps unregistered buildings so governments can recover lost tax revenue.",
   products: [
